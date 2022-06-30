@@ -1,5 +1,5 @@
 {
-	"name": "json2collectd-mqtt",
+	"name": "json2collectdmqtt",
 	"version": "1.0.0",
 	"description": "JSON to collectd MQTT message bridge",
 	"main": "src/index.mjs",
