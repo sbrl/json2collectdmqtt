@@ -70,6 +70,18 @@ sudo chmod 0660 /etc/default/json2collectdmqtt
 ```
 
 
+## Environment Variables
+In addition to the aforementioned command-line arguments (see `json2collectdmqtt --help`), a number of environment variables are also supported:
+
+Variable					| Use
+----------------------------|-------------------------
+`MQTT_USERNAME`				| The username to sign into the MQTT server with.
+`MQTT_PASSWORD`				| The password to sign into the MQTT server with.
+`JSON2COLLECTDMQTT_ARGS`	| Any additional command-line arguments to parse on startup.
+
+Note that environment variables are used for `MQTT_USERNAME` and `MQTT_PASSWORD` for security, as command-line arguments can be read by any user on the system! Just try it with `htop` (Linux; macOS) or the task manager (Windows) for example.
+
+
 ## Security
 If you've found a security issue, please don't open an issue. Instead, get in touch privately - e.g. via [Keybase](https://keybase.io/sbrl) or by email (`security [at sign] starbeamrainbowlabs [replace me with a dot] com`), and I'll try to respond ASAP.
 

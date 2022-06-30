@@ -21,6 +21,7 @@ async function load_subcommands(cli) {
 }
 
 export default async function () {
+	
 	let settings = (await import("./settings.mjs")).default;
 	let cli = new CliParser(path.resolve(__dirname, "../package.json"));
 	cli.argument("verbose", "Enable verbose debugging output", null, "boolean")
@@ -28,7 +29,11 @@ export default async function () {
 	
 	await load_subcommands(cli);
 	
-	settings.cli = cli.parse(process.argv.slice(2));
+	let args = process.argv.slice(2);
+	if(typeof process.env.JSON2COLLECTDMQTT_ARGS === "string")
+		args += ` ${process.env.JSON2COLLECTDMQTT_ARGS}`;
+	
+	settings.cli = cli.parse(args);
 	
 	if(cli.current_subcommand == null)
 		cli.write_help_exit();
