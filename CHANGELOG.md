@@ -15,6 +15,10 @@ npm install --save json2collectdmqtt
 -----
 
 
+## v1.0.2
+ - Bugfix `JSON2COLLECTDMQTT_ARGS`
+
+
 ## v1.0.1
  - Add `JSON2COLLECTDMQTT_ARGS` environment variable
  - Add documentation in README for supported environment variables

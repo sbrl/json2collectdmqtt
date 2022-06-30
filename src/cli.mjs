@@ -31,7 +31,7 @@ export default async function () {
 	
 	let args = process.argv.slice(2);
 	if(typeof process.env.JSON2COLLECTDMQTT_ARGS === "string")
-		args += ` ${process.env.JSON2COLLECTDMQTT_ARGS}`;
+		args.push(process.env.JSON2COLLECTDMQTT_ARGS.split(" "));
 	
 	settings.cli = cli.parse(args);
 	
