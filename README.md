@@ -22,6 +22,11 @@ This project converts JSON messages like this:
 
 Originally, I built this for [my autoplant plant monitoring project](https://git.starbeamrainbowlabs.com/sbrl/autoplant), but I'm sharing this tool here just in case it's useful to someone else.
 
+ - **Current version:** ![current npm version - see the GitHub releases](https://img.shields.io/npm/v/json2collectdmqtt)
+ - **Changelog:** https://github.com/sbrl/json2collectdmqtt/blob/main/CHANGELOG.md
+
+Are you using `json2collectdmqtt`? Please let me know that this has helped you by [replying to this GitHub discussion](https://github.com/sbrl/json2collectdmqtt/discussions/1)!
+
 
 ## System Requirements
  - A recent version of Node.js (the default `nodejs` package in Debian distros is waaay too old)
