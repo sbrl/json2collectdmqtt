@@ -1,0 +1,23 @@
+[Unit]
+Description=json2collectdmqtt: JSON to collectd MQTT message bridge
+# After=network-online.target
+
+[Service]
+Type=simple
+User=json2collectdmqtt
+Group=json2collectdmqtt
+EnvironmentFile=-/etc/default/json2collectdmqtt
+ExecStart=/usr/local/bin/json2collectdmqtt --server mqtts://mqtt.example.com:8883/
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=bees
+
+# Default 100, value can be between 1 and 10000
+IOWeight=1
+CPUWeight=1
+
+Nice=19
+
+[Install]
+WantedBy=multi-user.target

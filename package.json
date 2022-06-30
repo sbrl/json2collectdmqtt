@@ -1,29 +1,35 @@
 {
-  "name": "json2collectd-mqtt",
-  "version": "1.0.0",
-  "description": "JSON to collectd MQTT message bridge",
-  "main": "src/index.mjs",
-  "scripts": {
-    "test": "echo \"No tests have been implemented yet\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sbrl/json2collectd-mqtt.git"
-  },
-  "keywords": [
-    "mqtt",
-    "collectd",
-    "json",
-    "bridge"
-  ],
-  "author": "Starbeamrainbowlabs",
-  "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://github.com/sbrl/json2collectd-mqtt/issues"
-  },
-  "homepage": "https://github.com/sbrl/json2collectd-mqtt#readme",
-  "dependencies": {
-    "applause-cli": "^1.8.1",
-    "async-mqtt": "^2.6.2"
-  }
+	"name": "json2collectd-mqtt",
+	"version": "1.0.0",
+	"description": "JSON to collectd MQTT message bridge",
+	"main": "src/index.mjs",
+	"scripts": {
+		"test": "echo \"No tests have been implemented yet\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sbrl/json2collectd-mqtt.git"
+	},
+	"keywords": [
+		"mqtt",
+		"collectd",
+		"json",
+		"bridge"
+	],
+	"files": [
+		"src/"
+	],
+	"bin": {
+		"json2collectdmqtt": "src/index.mjs"
+	},
+	"author": "Starbeamrainbowlabs",
+	"license": "MPL-2.0",
+	"bugs": {
+		"url": "https://github.com/sbrl/json2collectd-mqtt/issues"
+	},
+	"homepage": "https://github.com/sbrl/json2collectd-mqtt#readme",
+	"dependencies": {
+		"applause-cli": "^1.8.1",
+		"async-mqtt": "^2.6.2"
+	}
 }
